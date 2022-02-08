@@ -12,8 +12,6 @@ import static org.junit.Assert.assertNotNull;
 
 
 
-
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 @Log4j

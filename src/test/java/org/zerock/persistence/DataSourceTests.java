@@ -3,6 +3,7 @@ package org.zerock.persistence;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +24,10 @@ public class DataSourceTests {
     private DataSource dataSource;
 
     @Setter(onMethod_ = { @Autowired } )
-    private sqlSessionFactory sqlSessionFactory;
+    private SqlSessionFactory sqlSessionFactory;
 
     @Test
     public void testMyBatis() {
-
         try (SqlSession session = sqlSessionFactory.openSession();
              Connection con = session.getConnection();
         ) {

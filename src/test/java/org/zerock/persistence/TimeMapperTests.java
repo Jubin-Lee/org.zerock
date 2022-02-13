@@ -14,7 +14,7 @@ import org.zerock.mapper.TimeMapper;
 @Log4j
 public class TimeMapperTests {
 
-    @Setter(onMethod_ = @Autowired)
+    @Setter(onMethod_ = {@Autowired})
     private TimeMapper timeMapper;
 
     @Test
